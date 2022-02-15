@@ -1,0 +1,67 @@
+/* components/Tabs/Tabs.wxss */
+@import '../../style/iconfonts.wxss';
+
+.title{
+  display: flex;
+  padding: 10rpx;
+}
+
+.title_item{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-content: center;
+}
+
+.chosed {
+  color: red;
+}
+/* 发货地址 */
+.send{
+  padding: 20rpx 0 20rpx 40rpx;
+  margin: 0 6rpx 0 6rpx;
+}
+/* 收货地址 */
+.get{
+  padding: 20rpx 0 20rpx 40rpx;
+  margin: 0 6rpx 0 6rpx;
+  border-radius: 15rpx;
+
+  background-color: rgb(207, 204, 204);
+  color: rgb(182, 52, 52);
+  font-size: 35rpx;
+  width: 673rpx;
+}
+/* 提交按钮 */
+.done{
+  padding: 6rpx;
+  margin: 0 6rpx 0 6rpx;
+  border-radius: 5rpx;
+
+  background-color: #ffd700;
+
+  width: 698rpx;
+}
+/* 下面部分 */
+.down{
+  background-color: rgb(255, 255, 255);
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+  margin: 35rpx 15rpx 15rpx 15rpx;
+
+}
+page{
+  background-color: rgb(240, 233, 233);
+}
+/* 轮播图 */
+swiper-item image{
+  width: 100%;
+}
+/* 身份认证 */
+.identfy{
+  padding: 50rpx 10rpx ;
+  font-size: 28rpx;
+  line-height: 28rpx;
+}
+
+

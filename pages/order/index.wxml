@@ -1,0 +1,4 @@
+<view class="out">
+    <image mode="aspectFit" src="../../icons/order.png"></image>
+    <view class="font">您还没订单噢</view>
+</view>

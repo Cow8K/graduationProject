@@ -1,0 +1,78 @@
+@import '../../style/iconfonts.wxss';
+
+page{
+    background-color: rgb(238, 238, 238);
+}
+.container{
+    /* margin: 10rpx; */
+    padding: 0rpx;
+
+    
+}
+/* 设置头像大小 */
+image{
+
+    margin: 0 0 35rpx 20rpx;
+    
+    height: 145rpx;
+    width: 145rpx;
+
+    /* 使头像边框成圆形 */
+    border: rgb(127, 126, 133) solid 1rpx;
+    border-radius: 75rpx;
+}
+
+.username{
+    margin: 20rpx;
+
+    font-weight: bold;
+}
+
+navigator{
+
+    margin: 20rpx;
+    padding: 0 10rpx;
+
+    height: 48rpx;
+    width: 600rpz;
+
+    line-height: 48rpx;
+    font-size: 28rpx;
+    color: rgb(100, 100, 100);
+    
+    background-color: rgb(191, 219, 255);
+}
+navigator text{
+    color: rgb(75, 55, 248);
+}
+
+.up{
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 45rpx;
+
+    width: 100%;
+    background-color: #fff;
+}
+
+.down{
+    width: 100%;
+    background-color: #fff;
+}
+
+.down view{
+
+    padding: 25rpx;
+
+    border-color: transparent transparent rgb(185, 190, 190) transparent;
+    border-style:solid;
+    border-width: 1rpx;
+
+}
+.font{
+    margin: 0 25rpx;
+}
+
+
+

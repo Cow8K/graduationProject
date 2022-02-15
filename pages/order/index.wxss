@@ -1,0 +1,12 @@
+image{
+    width: 250rpx;
+    height: 250rpx;
+    margin: 220rpx 130rpx 0 220rpx;
+}
+
+.font{
+    text-align: center;
+
+    color: rgb(190, 190, 190);
+    font-size: 30rpx;
+}

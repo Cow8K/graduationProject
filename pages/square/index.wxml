@@ -1,0 +1,3 @@
+<!--pages/square/index.wxml-->
+<text>pages/square/index.wxml</text>
+<image src="../../icons/schoolMap.png" alt="" style="height: 750rpx;width: 750rpx;"/> 

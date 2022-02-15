@@ -1,0 +1,5 @@
+<view class='footer_list2' data-id='4' catchtap='freeTell' data-current="4" bindtap="chooseImg">
+
+    <image class="footer-image2" src="../images/tell.png"></image>
+
+  </view>
