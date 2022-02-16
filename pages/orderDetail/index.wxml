@@ -1,0 +1,47 @@
+<view class="container">
+    <view class="top">
+        <text decode="{{true}}" class="iconfont icon-fuwuleixing">&nbsp;&nbsp;帮我买&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+        <text decode="{{true}}" class="iconfont icon-baojingzhuangtaiqidong-05">&nbsp;&nbsp;进行中</text>
+    </view>
+
+    <view class="address">
+        <view class="get">
+            <text class="iconfont icon-qujian"></text>
+            <text class="font">湖南省长沙市湖南工商大学贤德11栋</text>
+        </view>
+        <view class="receive">
+            <text class="iconfont icon-shoujian"></text>
+            <text class="font">湖南省邵东市大屋堂</text>
+        </view>
+    </view>
+
+    <view class="info">
+        <view>
+            <text class="iconfont icon-wupinxinxi icon"></text>
+            <text class="font">物品信息</text>
+        </view>
+        <view>
+            <text class="iconfont icon-pinglunbeizhu icon"></text>
+            <text class="font">备注</text>
+        </view>
+        <view>
+            <text class="iconfont icon-shijian icon"></text>
+            <text class="font">下单时间</text>
+        </view>
+        <view>
+            <text class="iconfont icon-xiaofei icon"></text>
+            <text class="font">小费</text>
+        </view>
+    </view>
+
+    <view class="runner">
+        <view>
+            <text class="iconfont icon-fuwu icon"></text>
+            <text class="font">姓名</text>
+        </view>
+        <view>
+            <text class="iconfont icon-lianxifangshi-xianxing icon"></text>
+            <text class="font">联系方式</text>
+        </view>
+    </view>
+</view>

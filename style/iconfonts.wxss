@@ -1,16 +1,72 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3181590 */
-  src: url('//at.alicdn.com/t/font_3181590_xuyy3si9zt.woff2?t=1644914083344') format('woff2'),
-       url('//at.alicdn.com/t/font_3181590_xuyy3si9zt.woff?t=1644914083344') format('woff'),
-       url('//at.alicdn.com/t/font_3181590_xuyy3si9zt.ttf?t=1644914083344') format('truetype');
+  src: url('//at.alicdn.com/t/font_3181590_pku3dg6katl.woff2?t=1645013302222') format('woff2'),
+       url('//at.alicdn.com/t/font_3181590_pku3dg6katl.woff?t=1645013302222') format('woff'),
+       url('//at.alicdn.com/t/font_3181590_pku3dg6katl.ttf?t=1645013302222') format('truetype');
 }
-
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-xiaofei:before {
+  content: "\e613";
+  font-size: 60rpx;
+}
+
+.icon-qujian:before {
+  content: "\e609";
+  font-size: 75rpx;
+  color: rgb(238, 164, 4);
+}
+
+.icon-shijian:before {
+  content: "\e8a9";
+  font-size: 60rpx;
+}
+
+.icon-fuwu:before {
+  content: "\e63a";
+  font-size: 60rpx;
+  color: rgb(238, 10, 56);
+}
+
+.icon-shoujian:before {
+  content: "\e64e";
+  font-size: 67rpx;
+  color: rgb(238, 31, 4);
+}
+
+.icon-lianxifangshi-xianxing:before {
+  content: "\e637";
+  font-size: 60rpx;
+  color:#00bfff;
+}
+
+.icon-baojingzhuangtaiqidong-05:before {
+  content: "\e62b";
+  font-size: 50rpx;
+  color:deepskyblue;
+}
+
+.icon-pinglunbeizhu:before {
+  content: "\e66e";
+  font-size: 60rpx;
+}
+
+.icon-wupinxinxi:before {
+  content: "\e680";
+  font-size: 60rpx;
+}
+
+.icon-fuwuleixing:before {
+  content: "\e60f";
+  font-size: 50rpx;
+  color:rgb(65, 207, 89);
+  
 }
 
 .icon-yijianfankui1:before {
@@ -30,18 +86,6 @@
   color:deepskyblue;
   font-size: 40rpx;
   line-height: 40rpx;
-}
-
-.icon-ziyuan:before {
-  content: "\e619";
-}
-
-.icon-yepian:before {
-  content: "\e612";
-}
-
-.icon-yuandianzhong:before {
-  content: "\e830";
 }
 
 .icon-a-shandiansudu:before {
@@ -74,8 +118,4 @@
 
 .icon-icon-:before {
   content: "\e701";
-}
-
-.icon-fenxiang:before {
-  content: "\e8b0";
 }

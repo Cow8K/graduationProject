@@ -1,0 +1,83 @@
+/* pages/orderDetail/index.wxss */
+@import '../../style/iconfonts.wxss';
+
+page{
+    /* background-color: rgb(231, 231, 231); */
+    background: linear-gradient(#55c8fd 47%,#4dc8f8 27%,#ebeaea 82%);
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.top{
+    margin: 27rpx 15rpx 8rpx 15rpx;
+
+    width: 700rpx;
+    border-radius: 15rpx;
+
+    background-color: #fff;
+}
+
+.top text{
+
+    display: inline-block;
+
+    margin: 12rpx 25rpx 10rpx 30rpx;
+
+    line-height: 50rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+
+    color: rgb(145, 143, 141);
+}
+
+.address{
+    margin: 27rpx 15rpx 8rpx 15rpx;
+
+    width: 700rpx;
+    border-radius: 15rpx;
+
+    background-color: #fff;
+}
+
+.address view{
+    margin: 15rpx;
+}
+
+.font{
+    display: inline-block;
+
+    padding: 20rpx;
+    margin: 10rpx;
+
+    width: 515rpx;
+    border-radius: 10rpx;
+
+    color: rgb(63, 63, 63);
+    background-color: rgb(241, 241, 241);
+}
+
+.info{
+    margin: 27rpx 15rpx 8rpx 15rpx;
+
+    width: 700rpx;
+    border-radius: 15rpx;
+
+    background-color: #fff;
+}
+
+.icon{
+    margin-left: 25rpx;
+}
+
+.runner{
+    margin: 27rpx 15rpx 27rpx 15rpx;
+
+    width: 700rpx;
+    border-radius: 15rpx;
+
+    background-color: #fff;
+}

@@ -13,14 +13,20 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "订单页面",
-                    "pathName": "pages/order/index",
+                    "name": "订单详情页面",
+                    "pathName": "pages/orderDetail/index",
                     "query": "",
                     "scene": null
                 },
                 {
                     "name": "测试页面",
                     "pathName": "pages/test/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "广场页面",
+                    "pathName": "pages/square/index",
                     "query": "",
                     "scene": null
                 }

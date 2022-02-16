@@ -1,1 +1,58 @@
 /* pages/square/index.wxss */
+@import '../../style/iconfonts.wxss';
+
+page{
+    background-color: rgb(231, 231, 231);
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    margin: 27rpx 15rpx 8rpx 15rpx;
+
+    width: 700rpx;
+    border-radius: 15rpx;
+
+    background-color: #fff;
+}
+
+.top{
+
+    margin: 15rpx;
+    padding: 10rpx;
+
+    border-color: transparent transparent rgb(155, 148, 148) transparent;
+    border-style: solid;
+    border-width: 3rpx;
+    
+    
+}
+
+.down{
+    margin: 27rpx 15rpx 8rpx 15rpx;
+
+    width: 680rpx;
+    border-radius: 15rpx;
+
+    background-color: #fff;
+}
+
+.down view{
+    margin: 8rpx;
+}
+
+.font{
+    display: inline-block;
+
+    padding: 20rpx;
+    margin: 10rpx;
+
+    width: 515rpx;
+    border-radius: 10rpx;
+
+    color: rgb(63, 63, 63);
+    background-color: rgb(241, 241, 241);
+}

@@ -9,6 +9,7 @@
     "pages/receive/index", 
     "pages/get/index",
     "pages/test/index",
+    "pages/orderDetail/index",
     "pages/feedback/index"
   ],
   "tabBar": {

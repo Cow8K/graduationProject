@@ -1,0 +1,10 @@
+/* components/index.wxss */
+
+page{
+    position: relative;
+    z-index:5;
+}
+
+.son{
+    background-color: #fff;
+}

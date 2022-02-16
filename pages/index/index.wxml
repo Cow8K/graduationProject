@@ -4,7 +4,7 @@
       <swiper-item><navigator url="/pages/showImg/index">
        <image mode="scaleToFill" src="../../icons/schoolMap.png" />
       </navigator></swiper-item>
-      <swiper-item><image src="../../icons/coreValue2.png" /></swiper-item>
+      <swiper-item><image mode="widthFix" src="../../icons/coreValue2.png" /></swiper-item>
     </swiper>
   </view>
 <view class="down">
