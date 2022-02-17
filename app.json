@@ -10,6 +10,7 @@
     "pages/get/index",
     "pages/test/index",
     "pages/orderDetail/index",
+    "pages/placOrder/index",
     "pages/feedback/index"
   ],
   "tabBar": {

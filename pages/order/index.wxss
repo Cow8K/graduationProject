@@ -1,12 +1,80 @@
+@import '../../style/iconfonts.wxss';
+
+page{
+    background-color: rgb(231, 231, 231);
+}
+
+
 image{
     width: 250rpx;
     height: 250rpx;
     margin: 220rpx 130rpx 0 220rpx;
 }
-
-.font{
+/* 提示 */
+.tips{
     text-align: center;
 
     color: rgb(190, 190, 190);
     font-size: 30rpx;
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+}
+
+.content{
+    margin: 27rpx 15rpx 8rpx 15rpx;
+
+    width: 700rpx;
+    border-radius: 15rpx;
+
+    background-color: #fff;
+}
+
+.top{
+
+    margin: 15rpx;
+    padding: 10rpx;
+
+    border-color: transparent transparent rgb(116, 112, 112) transparent;
+    border-style: solid;
+    border-width: 4rpx;
+    
+    
+}
+
+.down{
+    margin: 27rpx 15rpx 8rpx 15rpx;
+
+    width: 680rpx;
+    border-radius: 15rpx;
+
+    background-color: #fff;
+}
+
+.down view{
+    margin: 8rpx;
+}
+
+.font{
+    display: inline-block;
+
+    padding: 20rpx;
+    margin: 10rpx;
+
+    width: 515rpx;
+    border-radius: 10rpx;
+
+    color: rgb(63, 63, 63);
+    background-color: rgb(241, 241, 241);
+}
+
+/* 黄色表示为 自己发起的订单，别人帮忙跑腿 */
+.initiate{
+    background: linear-gradient(#fdf07d 47%,#f8f54d 27%,#fcf6c7 82%);
+}
+/* 红色表示为 别人发起的订单，自己跑腿；红色寓意为爱心 */
+.accept{
+    background: linear-gradient(#ff9494 30%,#fc9696 60%,#ffebe3 82%);
 }

@@ -1,4 +1,66 @@
-<view class="out">
-    <image mode="aspectFit" src="../../icons/order.png"></image>
-    <view class="font">您还没订单噢</view>
-</view>
+<block wx:if="{{false}}">
+    <view class="out">
+        <image mode="aspectFit" src="../../icons/order.png"></image>
+        <view class="tips">您还没订单噢</view>
+    </view>
+</block>
+
+<block>
+    <view class="container">
+        <navigator url="/pages/orderDetail/index">
+            <view class="content initiate">
+
+                <!-- 订单上半部分 -->
+                <view class="top">
+                    <text decode="{{true}}" class="iconfont icon-fuwuleixing">&nbsp;&nbsp;帮我买&nbsp;&nbsp;&nbsp;</text>
+                    <text style="color: black;" decode="{{true}}">|&nbsp;&nbsp;</text>
+                    <text decode="{{true}}" class="iconfont icon-baojingzhuangtaiqidong-05">&nbsp;&nbsp;进行中&nbsp;&nbsp;&nbsp;</text>
+                    <block>
+                        <text style="color: black;" decode="{{true}}">|&nbsp;&nbsp;</text>
+                        <text decode="{{true}}" class="iconfont icon-xiaofei">&nbsp;&nbsp;有小费</text>
+                    </block>     
+                </view>
+                
+                <!-- 订单下半部分 -->
+                <view class="down">
+                    <view>
+                        <text class="iconfont icon-qujian"></text>
+                        <text class="font">湖南省长沙市湖南工商大学贤德11栋</text>
+                    </view>
+                    <view>
+                        <text class="iconfont icon-shoujian"></text>
+                        <text class="font">湖南省邵东市大屋堂</text>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+
+        <navigator url="/pages/orderDetail/index">
+            <view class="content accept">
+
+                <!-- 订单上半部分 -->
+                <view class="top">
+                    <text decode="{{true}}" class="iconfont icon-fuwuleixing">&nbsp;&nbsp;帮我送&nbsp;&nbsp;&nbsp;</text>
+                    <text style="color: black;" decode="{{true}}">|&nbsp;&nbsp;</text>
+                    <text decode="{{true}}" class="iconfont icon-baojingzhuangtaiqidong-05">&nbsp;&nbsp;进行中&nbsp;&nbsp;&nbsp;</text>
+                    <block wx:if="{{true}}">
+                        <text style="color: black;" decode="{{true}}">|&nbsp;&nbsp;</text>
+                        <text decode="{{true}}" class="iconfont icon-xiaofei">&nbsp;&nbsp;有小费</text>
+                    </block>     
+                </view>
+                
+                <!-- 订单下半部分 -->
+                <view class="down">
+                    <view>
+                        <text class="iconfont icon-qujian"></text>
+                        <text class="font">书本上的知识</text>
+                    </view>
+                    <view>
+                        <text class="iconfont icon-shoujian"></text>
+                        <text class="font">我的脑袋瓜</text>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+    </view>
+</block>

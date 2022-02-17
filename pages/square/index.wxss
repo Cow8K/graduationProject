@@ -5,6 +5,23 @@ page{
     background-color: rgb(231, 231, 231);
 }
 
+/* 
+    image和.note是当广场没有订单时用来设置页面样式的，
+    其他的都是有订单时用来设置页面样式。
+ */
+image{
+    width: 250rpx;
+    height: 250rpx;
+    margin: 220rpx 130rpx 0 220rpx;
+}
+.note{
+    text-align: center;
+
+    color: rgb(61, 61, 61);
+    font-size: 38rpx;
+    font-family: serif;
+}
+
 .container{
     margin: 0;
     padding: 0;

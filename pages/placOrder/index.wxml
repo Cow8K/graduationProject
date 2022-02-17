@@ -1,0 +1,42 @@
+<view class="container">
+    <view class="info">
+        <view class="title">选择物品信息</view>
+        <view class="type">
+            <view class="item {{item.chosed?'beChosed':''}}" bindtap="choiseType" 
+                  wx:for="{{typeList}}" wx:key="name"
+                  data-id="{{item.id}}"
+            >
+                {{item.name}} 
+            </view>
+        </view>
+    </view>
+
+    <view class="address">
+        <view class="send">
+          <navigator class="iconfont icon-yuandianzhong" url="/pages/get/index"> 请填写取件地址 ></navigator>
+        </view>
+        <view class="get">
+          <navigator class="iconfont icon-yuandianzhong" url="/pages/receive/index"> 请填写收件地址 ></navigator>
+        </view>
+    </view>
+
+    <view class="input">
+        <view class="out">
+            <text decode="{{true}}">备注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> 
+            <input type="text" placeholder="可备注配送要求"/>
+        </view>
+        <view class="out">
+            <text decode="{{true}}">小费&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> 
+            <input type="text" placeholder="小费可选*"/>
+        </view>
+        <!-- <view class="out">
+            <text decode="{{true}}">物品信息&nbsp;&nbsp;&nbsp;&nbsp;</text> 
+            <input type="text" class="info" placeholder="请填写物品信息" value=""/>
+        </view> -->
+        <view class="out">
+            <text decode="{{true}}">取件时间&nbsp;&nbsp;&nbsp;&nbsp;</text> 
+            <input type="text" placeholder="请输入预计取件时间"/>
+        </view>
+        <input type="submit" value="确认" class="btn"/>
+    </view>
+</view>
