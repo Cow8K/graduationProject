@@ -42,8 +42,6 @@ Page({
     onLoad: function (options) {
         let app = getApp();
 
-        console.log(app.globalData.recAddress)
-    
         this.setData({
           getAddress:app.globalData.getAddress,
           recAddress:app.globalData.recAddress,

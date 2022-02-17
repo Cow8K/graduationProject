@@ -47,7 +47,7 @@
   <!-- 身份认证 -->
   <view>
   <!-- 如果用户没有身份认证则让block标签显示 -->
-    <block>
+    <block wx:if="{{!judge}}">
       <navigator style="margin: 20rpx;" url="/pages/certification/index">
         <text class="iconfont .icon-security identfy"> 您还没有『实名认证』</text>
         <text style="color: deepskyblue;" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;去认证 >

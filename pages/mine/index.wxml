@@ -3,9 +3,12 @@
         <image src="../../icons/flash.png" />
         <view>
             <text class="username">theFastestMan</text>
-            <navigator url="/pages/certification/index">
-                完成「实名认证」, 账号更安全<text> 去认证 ></text>
-            </navigator></view>
+            <block wx:if="{{!judge}}">
+                <navigator url="/pages/certification/index">
+                    完成「实名认证」, 账号更安全<text> 去认证 ></text>
+                </navigator>
+            </block>
+        </view>
     </view>
     <view class="down">
         <view>

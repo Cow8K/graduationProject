@@ -9,9 +9,9 @@ Page({
       {id:1,name:'帮我取',isChosen:false},
       {id:2,name:'帮我买',isChosen:false}
     ],
-    // getAddress:{address:'',number:'',contactman:'',phone:''}
     getAddress:{address:'....'},
-    recAddress:{address:''}
+    recAddress:{address:''},
+    judge:false,
   },
   changeStatus(e){
     let {id} = e.currentTarget.dataset
@@ -29,14 +29,21 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 设置收件与取件地址的数据共享
     let app = getApp();
-
-    // console.log(app.globalData.recAddress)
 
     this.setData({
       getAddress:app.globalData.getAddress,
       recAddress:app.globalData.recAddress,
-    })
+    });
+
+    // 检验学生是否进行了身份认证
+    wx.request({
+      url: 'http://localhost/judge',
+      success: result => {
+        if(result.data.status == 200) this.setData({judge:true});
+      }
+    });
   },
 
   /**

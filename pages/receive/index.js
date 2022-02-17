@@ -16,8 +16,6 @@ Page({
     },
 
     getValues(e){
-        // console.log(e);
-
         let recAddress = JSON.parse(JSON.stringify(e.detail.value));
         // console.log(recAddress);
 
@@ -27,9 +25,6 @@ Page({
         wx.reLaunch({
           url: '/pages/index/index',
         })
-
-        // console.log(app.recAddress);
-
     },
 
     /**
