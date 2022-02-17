@@ -9,29 +9,31 @@
 </view>
 <view class="down">
   <view >
+  
     <view class="title">
       <navigator wx:for="{{choise}}" wx:key="id" 
             class="title_item {{item.isChosen?'chosed iconfont icon-a-shandiansudu':''}}" 
-            url="{{item.name==='帮我买'?'/pages/placOrder/index':''}}"
+            url="{{item.name==='帮我买'?'/pages/placOrder/index':'/'}}"
             bindtap="changeStatus" data-id="{{item.id}}"
       >{{item.name}} 
       </navigator>
     </view>
+
     <view>
       <block wx:if="{{choise[0].isChosen}}">
         <view class="send">
-          <navigator class="iconfont icon-yuandianzhong" url="/pages/get/index"> 请填写取件地址 ></navigator>
+          <navigator class="iconfont icon-yuandianzhong" url="/pages/get/index"> {{getAddress.address}}</navigator>
         </view>
         <view class="get">
-          <navigator class="iconfont icon-yuandianzhong" url="/pages/receive/index"> 请填写收件地址 ></navigator>
+          <navigator class="iconfont icon-yuandianzhong" url="/pages/receive/index">{{recAddress.address}}</navigator>
         </view>
       </block>
       <block wx:if="{{choise[1].isChosen}}">
         <view class="get">
-          <navigator class="iconfont icon-yuandianzhong" url="/pages/receive/index"> 请填写收件地址 ></navigator>
+          <navigator class="iconfont icon-yuandianzhong" url="/pages/receive/index">{{recAddress.address}}</navigator>
         </view>
         <view class="send">
-          <navigator class="iconfont icon-yuandianzhong" url="/pages/get/index"> 请填写取件地址 ></navigator>
+          <navigator class="iconfont icon-yuandianzhong" url="/pages/get/index"> {{getAddress.address}}</navigator>
         </view>
       </block>
       <view  style="text-align: center;">

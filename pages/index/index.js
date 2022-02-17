@@ -8,7 +8,10 @@ Page({
       {id:0,name:'帮我送',isChosen:true},
       {id:1,name:'帮我取',isChosen:false},
       {id:2,name:'帮我买',isChosen:false}
-    ] 
+    ],
+    // getAddress:{address:'',number:'',contactman:'',phone:''}
+    getAddress:{address:'....'},
+    recAddress:{address:''}
   },
   changeStatus(e){
     let {id} = e.currentTarget.dataset
@@ -26,7 +29,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    let app = getApp();
+
+    // console.log(app.globalData.recAddress)
+
+    this.setData({
+      getAddress:app.globalData.getAddress,
+      recAddress:app.globalData.recAddress,
+    })
   },
 
   /**

@@ -13,10 +13,10 @@
 
     <view class="address">
         <view class="send">
-          <navigator class="iconfont icon-yuandianzhong" url="/pages/get/index"> 请填写取件地址 ></navigator>
+          <navigator class="iconfont icon-yuandianzhong" url="/pages/get/index"> {{getAddress.address}}</navigator>
         </view>
         <view class="get">
-          <navigator class="iconfont icon-yuandianzhong" url="/pages/receive/index"> 请填写收件地址 ></navigator>
+          <navigator class="iconfont icon-yuandianzhong" url="/pages/receive/index"> {{recAddress.address}}</navigator>
         </view>
     </view>
 

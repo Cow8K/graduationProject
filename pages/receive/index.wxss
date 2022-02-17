@@ -44,3 +44,7 @@ page{
     background-color: rgb(175, 175, 175);
     /* background-color: rgb(252, 248, 44); 金黄色 */
 }
+
+.change{
+    background-color: rgb(252, 248, 44); 
+}

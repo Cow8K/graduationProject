@@ -26,5 +26,10 @@ App({
    */
   onError: function (msg) {
     
+  },
+  // 全局变量
+  globalData : {
+    getAddress:{address:' 请填写取件地址 >',number:'',contactman:'',phone:''},
+    recAddress:{address:' 请填写收件地址 >',number:'',contactman:'',phone:''}
   }
 })

@@ -5,7 +5,28 @@ Page({
      * 页面的初始数据
      */
     data: {
+        btn:false,
+    },
 
+    changeColor(e){
+        // console.log(e)
+        if(e.detail.value === ""){
+            this.setData({btn:false})
+        }else this.setData({btn:true});
+    },
+
+    getValues(e){
+        // console.log(e);
+
+        let getAddress = JSON.parse(JSON.stringify(e.detail.value));
+        // console.log(recAddress);
+
+        let app = getApp();
+        app.globalData.getAddress = getAddress;
+
+        wx.reLaunch({
+          url: '/pages/index/index',
+        })
     },
 
     /**
