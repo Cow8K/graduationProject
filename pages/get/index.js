@@ -8,6 +8,7 @@ Page({
         btn:false,
     },
 
+    // 改变按钮颜色
     changeColor(e){
         // console.log(e)
         if(e.detail.value === ""){
@@ -15,6 +16,7 @@ Page({
         }else this.setData({btn:true});
     },
 
+    // 获取表单数据（地址），并将数据设置为全局变量
     getValues(e){
         // console.log(e);
 

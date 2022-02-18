@@ -5,13 +5,29 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        orderList:[],
+        stuId:''
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+
+        let app = getApp();
+        let stuId ='';
+        app.globalData.stuId ? stuId=app.globalData.stuId : stuId;
+
+        wx.request({
+          url: 'http://localhost/order/myOrder?stuId='+stuId,
+          success:(result)=>{
+        // console.log(result.data.orderList);
+              this.setData({
+                orderList:result.data.orderList,
+                stuId:result.data.stuId
+              })
+          }
+        })
 
     },
 

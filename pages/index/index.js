@@ -41,7 +41,10 @@ Page({
     wx.request({
       url: 'http://localhost/judge',
       success: result => {
-        if(result.data.status == 200) this.setData({judge:true});
+        if(result.data.status == 200) {
+          this.setData({judge:true});
+          app.globalData.stuId = result.data.stuId;
+        }
       }
     });
   },

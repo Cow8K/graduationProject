@@ -13,8 +13,8 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "我的页面",
-                    "pathName": "pages/mine/index",
+                    "name": "订单详情页面",
+                    "pathName": "pages/orderDetail/index",
                     "query": "",
                     "scene": null
                 },

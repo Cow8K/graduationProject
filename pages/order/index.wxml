@@ -1,23 +1,25 @@
-<block wx:if="{{false}}">
+<!-- 当订单列表为0 的时候，显示以下标签 -->
+<block wx:if="{{orderList.length==0}}">
     <view class="out">
         <image mode="aspectFit" src="../../icons/order.png"></image>
         <view class="tips">您还没订单噢</view>
     </view>
 </block>
 
-<block>
+<!-- 当订单列表为不0 的时候，显示以下标签 -->
+<block wx:if="{{orderList.length!=0}}">
     <view class="container">
-        <navigator url="/pages/orderDetail/index">
-            <view class="content initiate">
+        <navigator url="/pages/orderDetail/index?oId={{item.oId}}" wx:for="{{orderList}}" wx:key="uId">
+            <view class="content {{item.uId==stuId?'initiate':'accept'}}">
 
                 <!-- 订单上半部分 -->
                 <view class="top">
-                    <text decode="{{true}}" class="iconfont icon-fuwuleixing">&nbsp;&nbsp;帮我买&nbsp;&nbsp;&nbsp;</text>
+                    <text decode="{{true}}" class="iconfont icon-fuwuleixing">&nbsp;&nbsp;{{item.type==0?'帮我送':(item.type == 1?'帮我取':'帮我买')}}&nbsp;&nbsp;&nbsp;</text>
                     <text style="color: black;" decode="{{true}}">|&nbsp;&nbsp;</text>
-                    <text decode="{{true}}" class="iconfont icon-baojingzhuangtaiqidong-05">&nbsp;&nbsp;进行中&nbsp;&nbsp;&nbsp;</text>
+                    <text decode="{{true}}" class="iconfont icon-baojingzhuangtaiqidong-05">&nbsp;&nbsp;{{item.recSts==0?'已完成':'进行中'}}&nbsp;&nbsp;&nbsp;</text>
                     <block>
                         <text style="color: black;" decode="{{true}}">|&nbsp;&nbsp;</text>
-                        <text decode="{{true}}" class="iconfont icon-xiaofei">&nbsp;&nbsp;有小费</text>
+                        <text decode="{{true}}" class="iconfont icon-xiaofei">&nbsp;&nbsp;{{item.pay==0?'':'有小费'}}</text>
                     </block>     
                 </view>
                 
@@ -25,20 +27,20 @@
                 <view class="down">
                     <view>
                         <text class="iconfont icon-qujian"></text>
-                        <text class="font">湖南省长沙市湖南工商大学贤德11栋</text>
+                        <text class="font">{{item.getAddress}}</text>
                     </view>
                     <view>
                         <text class="iconfont icon-shoujian"></text>
-                        <text class="font">湖南省邵东市大屋堂</text>
+                        <text class="font">{{item.recAddress}}</text>
                     </view>
                 </view>
             </view>
         </navigator>
 
-        <navigator url="/pages/orderDetail/index">
+        <!-- 以下代码为前期测试页面，与后端数据无联系  -->
+        <!-- <navigator url="/pages/orderDetail/index">
             <view class="content accept">
 
-                <!-- 订单上半部分 -->
                 <view class="top">
                     <text decode="{{true}}" class="iconfont icon-fuwuleixing">&nbsp;&nbsp;帮我送&nbsp;&nbsp;&nbsp;</text>
                     <text style="color: black;" decode="{{true}}">|&nbsp;&nbsp;</text>
@@ -49,7 +51,6 @@
                     </block>     
                 </view>
                 
-                <!-- 订单下半部分 -->
                 <view class="down">
                     <view>
                         <text class="iconfont icon-qujian"></text>
@@ -61,6 +62,6 @@
                     </view>
                 </view>
             </view>
-        </navigator>
+        </navigator> -->
     </view>
 </block>
