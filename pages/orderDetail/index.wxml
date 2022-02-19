@@ -1,7 +1,7 @@
 <view class="container">
     <view class="top">
         <text decode="{{true}}" class="iconfont icon-fuwuleixing">&nbsp;&nbsp;{{orders[0].type==0?'帮我送':(orders[0].type == 1?'帮我取':'帮我买')}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
-        <text decode="{{true}}" class="iconfont icon-baojingzhuangtaiqidong-05">&nbsp;&nbsp;{{orders[0].recSts==0?'已完成':'进行中'}}</text>
+        <text decode="{{true}}" class="iconfont icon-baojingzhuangtaiqidong-05">&nbsp;&nbsp;{{orders[0].recSts==0?'已完成':(orders[0].recSts == 1?'进行中':'等待接单')}}</text>
     </view>
 
     <view class="address">
@@ -30,18 +30,32 @@
         </view>
         <view>
             <text class="iconfont icon-xiaofei icon"></text>
-            <text class="font">{{orders[0].pay}}</text>
+            <text class="font">{{orders[0].pay==0?'无小费':orders[0].pay}}</text>
         </view>
     </view>
 
     <view class="runner">
         <view>
             <text class="iconfont icon-fuwu icon"></text>
-            <text class="font">姓名</text>
+            <text class="font">{{orders[0].cname}}</text>
         </view>
         <view>
             <text class="iconfont icon-lianxifangshi-xianxing icon"></text>
-            <text class="font">联系方式</text>
+            <text class="font">{{orders[0].phone}}</text>
         </view>
     </view>
+
+    <!-- 订单状态显示 -->
+    <block wx:if="{{orders[0].recSts==0}}">
+        <view class="status">
+            <text class="iconfont icon-gou"> 已完成</text>
+        </view>
+        
+    </block>
+    <block wx:if="{{orders[0].recSts!=0}}">
+        <view class="status">
+            <text decode="{{true}}" class="done iconfont icon-gou" bindtap="finishOrder" > 订单完成&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+            <text decode="{{true}}" class="cancle iconfont icon-cha" bindtap="cancleOrder"> 取消订单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>
+        </view>
+    </block>
 </view>

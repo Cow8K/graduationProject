@@ -13,8 +13,23 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+      
+    },
 
-        let app = getApp();
+    /**
+     * 生命周期函数--监听页面初次渲染完成
+     */
+    onReady: function () {
+
+    },
+
+    /**
+     * 生命周期函数--监听页面显示
+     * 当页面显示时就向数据库请求，我的所有订单信息
+     * 如果将以下代码放在onLoad函数里面，数据会出现脏读的情况
+     */
+    onShow: function () {
+      let app = getApp();
         let stuId ='';
         app.globalData.stuId ? stuId=app.globalData.stuId : stuId;
 
@@ -28,21 +43,6 @@ Page({
               })
           }
         })
-
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
     },
 
     /**

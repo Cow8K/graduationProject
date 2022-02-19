@@ -19,7 +19,7 @@
                     <text decode="{{true}}" class="iconfont icon-baojingzhuangtaiqidong-05">&nbsp;&nbsp;{{item.recSts==0?'已完成':'进行中'}}&nbsp;&nbsp;&nbsp;</text>
                     <block>
                         <text style="color: black;" decode="{{true}}">|&nbsp;&nbsp;</text>
-                        <text decode="{{true}}" class="iconfont icon-xiaofei">&nbsp;&nbsp;{{item.pay==0?'':'有小费'}}</text>
+                        <text decode="{{true}}" class="iconfont icon-xiaofei">&nbsp;&nbsp;{{item.pay==0?'无小费':'有小费'}}</text>
                     </block>     
                 </view>
                 
