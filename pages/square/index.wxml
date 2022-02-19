@@ -1,23 +1,25 @@
-<block >
+<!-- 当没有未被接单的订单时，显示以下代码 -->
+<block wx:if="{{orderList.length==0}}">
     <view>
         <image mode="aspectFit" src="../../icons/square.png"></image>
         <view class="note">广场暂时没人...</view>
     </view>
 </block>
 
-<block wx:if="{{false}}">
+<!-- 当有未被接单的订单时，显示以下代码 -->
+<block wx:if="{{orderList.length!=0}}">
     <view class="container">
-        <navigator url="/pages/orderDetail/index">
+        <navigator url="/pages/squOrderDetail/index?oId={{item.oId}}" wx:for="{{orderList}}" wx:key="uId">
             <view class="content">
 
                 <!-- 订单上半部分 -->
                 <view class="top">
-                    <text decode="{{true}}" class="iconfont icon-fuwuleixing">&nbsp;&nbsp;帮我买&nbsp;&nbsp;&nbsp;</text>
-                    <text style="color: darkgray;" decode="{{true}}">|&nbsp;&nbsp;</text>
-                    <text decode="{{true}}" class="iconfont icon-baojingzhuangtaiqidong-05">&nbsp;&nbsp;进行中&nbsp;&nbsp;&nbsp;</text>
+                    <text decode="{{true}}" class="iconfont icon-fuwuleixing">&nbsp;&nbsp;{{item.type==0?'帮我送':(item.type == 1?'帮我取':'帮我买')}}&nbsp;&nbsp;&nbsp;</text>
+                    <text style="color: black;" decode="{{true}}">|&nbsp;&nbsp;</text>
+                    <text decode="{{true}}" class="iconfont icon-baojingzhuangtaiqidong-05">&nbsp;&nbsp;{{item.recSts==0?'已完成':(item.recSts == 1?'进行中':'接单中')}}&nbsp;&nbsp;&nbsp;</text>
                     <block>
-                        <text style="color: darkgray;" decode="{{true}}">|&nbsp;&nbsp;</text>
-                        <text decode="{{true}}" class="iconfont icon-xiaofei">&nbsp;&nbsp;有小费</text>
+                        <text style="color: black;" decode="{{true}}">|&nbsp;&nbsp;</text>
+                        <text decode="{{true}}" class="iconfont icon-xiaofei">&nbsp;&nbsp;{{item.pay==0?'无小费':'有小费'}}</text>
                     </block>     
                 </view>
                 
@@ -25,95 +27,11 @@
                 <view class="down">
                     <view>
                         <text class="iconfont icon-qujian"></text>
-                        <text class="font">湖南省长沙市湖南工商大学贤德11栋</text>
+                        <text class="font">{{item.getAddress}}</text>
                     </view>
                     <view>
                         <text class="iconfont icon-shoujian"></text>
-                        <text class="font">湖南省邵东市大屋堂</text>
-                    </view>
-                </view>
-            </view>
-        </navigator>
-
-        <navigator url="/pages/orderDetail/index">
-            <view class="content">
-
-                <!-- 订单上半部分 -->
-                <view class="top">
-                    <text decode="{{true}}" class="iconfont icon-fuwuleixing">&nbsp;&nbsp;帮我送&nbsp;&nbsp;&nbsp;</text>
-                    <text style="color: darkgray;" decode="{{true}}">|&nbsp;&nbsp;</text>
-                    <text decode="{{true}}" class="iconfont icon-baojingzhuangtaiqidong-05">&nbsp;&nbsp;进行中&nbsp;&nbsp;&nbsp;</text>
-                    <block wx:if="{{true}}">
-                        <text style="color: darkgray;" decode="{{true}}">|&nbsp;&nbsp;</text>
-                        <text decode="{{true}}" class="iconfont icon-xiaofei">&nbsp;&nbsp;有小费</text>
-                    </block>     
-                </view>
-                
-                <!-- 订单下半部分 -->
-                <view class="down">
-                    <view>
-                        <text class="iconfont icon-qujian"></text>
-                        <text class="font">书本上的知识</text>
-                    </view>
-                    <view>
-                        <text class="iconfont icon-shoujian"></text>
-                        <text class="font">我的脑袋瓜</text>
-                    </view>
-                </view>
-            </view>
-        </navigator>
-
-        <navigator url="/pages/orderDetail/index">
-            <view class="content">
-
-                <!-- 订单上半部分 -->
-                <view class="top">
-                    <text decode="{{true}}" class="iconfont icon-fuwuleixing">&nbsp;&nbsp;帮我买&nbsp;&nbsp;&nbsp;</text>
-                    <text style="color: darkgray;" decode="{{true}}">|&nbsp;&nbsp;</text>
-                    <text decode="{{true}}" class="iconfont icon-baojingzhuangtaiqidong-05">&nbsp;&nbsp;进行中&nbsp;&nbsp;&nbsp;</text>
-                    <block wx:if="{{false}}">
-                        <text style="color: darkgray;" decode="{{true}}">|&nbsp;&nbsp;</text>
-                        <text decode="{{true}}" class="iconfont icon-xiaofei">&nbsp;&nbsp;有小费</text>
-                    </block>     
-                </view>
-                
-                <!-- 订单下半部分 -->
-                <view class="down">
-                    <view>
-                        <text class="iconfont icon-qujian"></text>
-                        <text class="font">湖南省邵东市镇四中</text>
-                    </view>
-                    <view>
-                        <text class="iconfont icon-shoujian"></text>
-                        <text class="font">湖南省邵东市大屋堂</text>
-                    </view>
-                </view>
-            </view>
-        </navigator>
-
-        <navigator url="/pages/orderDetail/index">
-            <view class="content">
-
-                <!-- 订单上半部分 -->
-                <view class="top">
-                    <text decode="{{true}}" class="iconfont icon-fuwuleixing">&nbsp;&nbsp;帮我送&nbsp;&nbsp;&nbsp;</text>
-                    <text style="color: darkgray;" decode="{{true}}">|&nbsp;&nbsp;</text>
-                    <text decode="{{true}}" class="iconfont icon-baojingzhuangtaiqidong-05">&nbsp;&nbsp;进行中&nbsp;&nbsp;&nbsp;</text>
-                    <block wx:if="{{false}}">
-                        <text style="color: darkgray;" decode="{{true}}">|&nbsp;&nbsp;</text>
-                        <text decode="{{true}}" class="iconfont icon-xiaofei">&nbsp;&nbsp;有小费</text>
-                    </block>     
-                </view>
-                
-                <!-- 订单下半部分 -->
-                <view class="down">
-                    <view>
-                        <text class="iconfont icon-qujian"></text>
-                        <text class="font">你的心</text>
-                    </view>
-                    <view>
-                        <text class="iconfont icon-shoujian"></text>
-                        <text class="font">我的心</text>
+                        <text class="font">{{item.recAddress}}</text>
                     </view>
                 </view>
             </view>

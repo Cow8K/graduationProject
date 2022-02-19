@@ -5,7 +5,9 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        // 未接单的订单列表
+        orderList:[],
+        stuId:''
     },
 
     /**
@@ -17,16 +19,30 @@ Page({
 
     /**
      * 生命周期函数--监听页面初次渲染完成
+     * 当页面渲染完成时，直接向服务器请求未被接单的订单的信息
      */
     onReady: function () {
+        // let app = getApp();
+        // let stuId ='';
+        // app.globalData.stuId ? stuId=app.globalData.stuId : stuId;
 
+        
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        wx.request({
+            url: 'http://localhost/square/orders',
+            success:(result)=>{
+                if(result.data.status == 200){
+                    this.setData({
+                        orderList:result.data.orders,
+                    })
+                }
+            }
+          })
     },
 
     /**

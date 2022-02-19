@@ -1,0 +1,29 @@
+/* pages/squOrderDetail/index.wxss */
+
+@import '../orderDetail/index.wxss';
+
+.status{
+    margin: 20rpx 15rpx 27rpx 15rpx;
+    padding: 10rpx 0;
+
+    width: 700rpx;
+    border-radius: 15rpx;
+
+    text-align: center;
+    font-family: serif;
+    font-size: 40rpx;
+    font-weight: bold;
+
+
+    color: rgb(158, 158, 158);
+    background-color: #fff;
+}
+
+.accept{
+    display: inline-block;
+    padding: 10rpx 10rpx;
+
+    font-size: 38rpx;
+    font-family: serif;
+    color: rgb(199, 198, 198);
+}

@@ -11,6 +11,7 @@
     "pages/test/index",
     "pages/orderDetail/index",
     "pages/placOrder/index",
+    "pages/squOrderDetail/index",
     "pages/feedback/index"
   ],
   "tabBar": {

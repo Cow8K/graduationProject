@@ -30,19 +30,19 @@ Page({
      */
     onShow: function () {
       let app = getApp();
-        let stuId ='';
-        app.globalData.stuId ? stuId=app.globalData.stuId : stuId;
+      let stuId ='';
+      app.globalData.stuId ? stuId=app.globalData.stuId : stuId;
 
-        wx.request({
-          url: 'http://localhost/order/myOrder?stuId='+stuId,
-          success:(result)=>{
-        // console.log(result.data.orderList);
-              this.setData({
-                orderList:result.data.orderList,
-                stuId:result.data.stuId
-              })
-          }
-        })
+      wx.request({
+        url: 'http://localhost/order/myOrder?stuId='+stuId,
+        success:(result)=>{
+      // console.log(result.data.orderList);
+            this.setData({
+              orderList:result.data.orderList,
+              stuId:result.data.stuId
+            })
+        }
+      })
     },
 
     /**
