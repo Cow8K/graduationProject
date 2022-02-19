@@ -1,0 +1,50 @@
+/* 使整个页面背景颜色渐变 */
+page{
+    background: linear-gradient(#fffd6b 15%,#f5ff6a 15%,#ebeaea 42%);
+}
+
+.container{
+    margin: 20rpx;
+    padding: 25rpx;
+
+    border-radius: 20rpx;
+
+    background-color: #fff;
+}
+
+.out{
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content:center */
+    padding: 15rpx;
+    margin: 15rpx;
+
+    border-color: transparent transparent rgb(185, 190, 190) transparent;
+    border-style:solid;
+    border-width: 1rpx;
+}
+
+/* 让 * 的颜色变成红色 */
+.out text{
+    color: rgb(231, 31, 31);
+}
+/* 输入框宽度 */
+.out input{
+    width: 470rpx;
+}
+
+.btn{
+    margin: 70rpx 45rpx 20rpx 45rpx;
+
+    height: 75rpx;
+    border-radius: 10rpx;
+
+    text-align: center;
+    /* font-weight: bold; */
+    background-color: rgb(175, 175, 175);
+    /* background-color: rgb(252, 248, 44); 金黄色 */
+}
+
+.change{
+    background-color: rgb(252, 248, 44); 
+}

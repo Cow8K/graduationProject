@@ -17,8 +17,11 @@ Page({
         success:(res)=>{
           // 如果用户点击确定，则向服务器发送请求，使订单的状态变为已完成
           if(res.confirm){
+            let app = getApp();
+            let stuId = app.globalData.stuId;
+
             wx.request({
-              url: 'http://localhost/square/accept?oId='+this.data.oId,
+              url: 'http://localhost/square/accept?oId='+this.data.oId+'&stuId='+stuId,
               success:(result)=>{
                 if(result.data.status==200){
                   // 当订单完成后，再向数据库请求最新的订单数据

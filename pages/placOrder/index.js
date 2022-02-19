@@ -17,11 +17,12 @@ Page({
             {id:8,name:'其他',chosed:false}
         ],
         getAddress:{address:'....'},
-        recAddress:{address:''}
+        recAddress:{address:''},
+        typeName:'',
     },
 
     choiseType(e){
-        // console.log(e)
+        console.log(e)
 
         let {id} = e.currentTarget.dataset;
         let temp = JSON.parse(JSON.stringify(this.data.typeList));
@@ -31,9 +32,52 @@ Page({
         });
 
         this.setData({
-            typeList:temp
+            typeList:temp,
+            typeName:e.currentTarget.dataset.value,
         })
         
+    },
+
+    makeOrder(e){
+        let app = getApp();
+        
+        let uId = app.globalData.stuId;
+        let getAddress = this.data.getAddress.address;
+        let recAddress = this.data.recAddress.address;
+        let name = this.data.typeName;
+        let type = app.globalData.type;
+
+        let orderInfo = {
+            uId,
+            type,
+            name,
+            // content : e.detail.value.content,
+            // time : e.detail.value.time,
+            // pay:e.e.detail.value.pay,
+            ...e.detail.value,
+            getAddress,
+            recAddress,
+           
+        };
+
+        wx.request({
+          url: 'http://localhost/order/makeOrder',
+          data:orderInfo,
+        //   method:'POST',
+          success: result =>{
+            if(result.data.status == 200){
+                wx.switchTab({
+                  url: '/pages/index/index.',
+                });
+
+                wx.showToast({
+                  title: '下单成功！',
+                  icon:'success'
+                })
+            }
+          }
+        })
+
     },
 
     /**

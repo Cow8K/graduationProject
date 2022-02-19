@@ -13,8 +13,8 @@
         "miniprogram": {
             "list": [
                 {
-                    "name": "广场页面",
-                    "pathName": "pages/square/index",
+                    "name": "下单页面",
+                    "pathName": "pages/placOrder/index",
                     "query": "",
                     "scene": null
                 },

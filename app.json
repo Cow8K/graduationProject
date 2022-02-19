@@ -12,6 +12,8 @@
     "pages/orderDetail/index",
     "pages/placOrder/index",
     "pages/squOrderDetail/index",
+    "pages/placeGet/index",
+    "pages/placeReceive/index",
     "pages/feedback/index"
   ],
   "tabBar": {

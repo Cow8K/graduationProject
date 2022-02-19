@@ -20,6 +20,9 @@ Page({
     list.forEach((item)=>{
         item.id == id ? item.isChosen=true : item.isChosen=false
     })
+
+    let app = getApp();
+    app.globalData.type = e.currentTarget.dataset.id;
     
     this.setData({
       choise:list
