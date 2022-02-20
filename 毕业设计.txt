@@ -1,0 +1,34 @@
+create table t_certification(
+	stuId char(9) primary key,
+	pId char(18) unique,
+	name varchar(16) not null,
+	phone char(11) not null unique
+)engine=innodb default charset=utf8;
+
+--sort char(1) not null,  -- 订单种类：0表示为跑腿者，1表示为订单发起者
+create table t_order(
+	oId int(11) primary key auto_increment,
+	uId char(9),
+	type char(1) not null,  -- 订单类型：0表示为‘帮我送‘，1表示‘帮我取‘，2表示‘帮我买‘
+	name varchar(255) not null,
+	content varchar(255) not null,
+	time varchar(36) not null,
+	recSts char(1) not null,	-- 订单状态：0表示已完成，1表示进行中，2表示暂时无人接单
+	send_uId char(9),
+	pay varchar(4) default '0',
+	getAddress varchar(255) not null,
+	recAddress varchar(255) not null,
+	constraint fk_certification_order1 foreign key (uId) references t_certification (stuId),
+	constraint fk_certification_order2 foreign key (send_uId) references t_certification(stuId)
+)engine=innodb default charset=utf8;
+
+insert into t_order values(1,'180****37','2','其他','天佑我的爱人',now(),'1','170125827','520','myHeart','yourHeart');
+insert into t_order values(2,'180****37','1','快递','易碎物品请小心',now(),'1','894349920','','长沙市湖工商','邵东市大屋堂');
+insert into t_order values(3,'894349920','2','其他','南无阿弥陀佛，知识速来！',now(),'1','180****37','9999', '书本上的知识','我的脑袋瓜');
+insert into t_order values(4,'170125827','1','其他','平平安安快快乐乐',now(),'1','180****37','0','世上一切美好','阿段的心');
+insert into t_order values(5,'180****37','0','其他','测试测试测试测试',now(),'2','170125827','0','取货地址测试','收货地址测试')
+
+create table test(
+	id int primary key auto_increment, 
+	test varchar(255)
+)engine=innodb default charset=utf8

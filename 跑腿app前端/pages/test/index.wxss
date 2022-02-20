@@ -1,0 +1,17 @@
+view{
+    background-color: rgb(142, 241, 245);
+}
+
+page{
+    position:absolute;
+    z-index: 1;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50rpx;
+}
+

@@ -1,0 +1,2 @@
+<!--pages/showImg/index.wxml-->
+<image src="../../icons/schoolMap.png" alt="" style="height: 750rpx;width: 750rpx;"/>

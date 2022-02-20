@@ -1,0 +1,10 @@
+<form action="">
+    <textarea 
+        name="feed" id="feed" maxlength="500" 
+        placeholder="请留下您宝贵的意见，我们将努力改进~">
+    </textarea>
+    <view class="tips">不少于5个字</view>
+    <input type="text" placeholder="请留下您的电话号码（选填）" class="phone"/>
+
+    <input type="submit" value="提交" class="submit"/>
+</form>

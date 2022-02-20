@@ -1,0 +1,6 @@
+<!--components/index.wxml-->
+<text>components/index.wxml</text>
+<view class="son">
+    <image src="../../icons/flash.png"></image>
+   
+</view>

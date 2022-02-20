@@ -1,0 +1,45 @@
+@import '../../style/iconfonts.wxss';
+
+page{
+    background-color: rgb(238, 238, 238);
+}
+
+textarea{
+    padding: 25rpx;
+
+    height:250rpx;
+    width: 100%;
+
+    font-size: 30rpx;
+    font-weight: 100;
+    
+    background-color: #fff;
+}
+
+.tips{
+    display: flex;
+    justify-content: flex-end;
+
+    width: 100%;
+
+    font-size: 24rpx;
+    color:rgb(77, 77, 77);
+    background-color: #fff;
+}
+
+.phone{
+    margin: 35rpx 0 55rpx 0;
+    padding: 20rpx;
+    background-color: #fff;
+}
+
+.submit{
+    margin: 24rpx;
+    padding: 20rpx;
+
+    width: 666rpx;
+
+    text-align: center;
+    color:#fff;
+    background-color: rgb(182, 182, 182);
+}

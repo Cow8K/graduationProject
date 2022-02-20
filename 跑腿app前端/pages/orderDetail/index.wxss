@@ -1,0 +1,119 @@
+/* pages/orderDetail/index.wxss */
+@import '../../style/iconfonts.wxss';
+
+page{
+    /* background-color: rgb(231, 231, 231); */
+    background: linear-gradient(#55c8fd 47%,#4dc8f8 27%,#ebeaea 82%);
+}
+
+.container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.top{
+    margin: 27rpx 15rpx 8rpx 15rpx;
+
+    width: 700rpx;
+    border-radius: 15rpx;
+
+    background-color: #fff;
+}
+
+.top text{
+
+    display: inline-block;
+
+    margin: 12rpx 25rpx 10rpx 30rpx;
+
+    line-height: 50rpx;
+    font-size: 30rpx;
+    font-weight: bold;
+
+    color: rgb(145, 143, 141);
+}
+
+.address{
+    margin: 27rpx 15rpx 8rpx 15rpx;
+
+    width: 700rpx;
+    border-radius: 15rpx;
+
+    background-color: #fff;
+}
+
+.address view{
+    margin: 15rpx;
+}
+
+.font{
+    display: inline-block;
+
+    padding: 20rpx;
+    margin: 10rpx;
+
+    width: 515rpx;
+    border-radius: 10rpx;
+
+    color: rgb(63, 63, 63);
+    background-color: rgb(241, 241, 241);
+}
+
+.info{
+    margin: 27rpx 15rpx 8rpx 15rpx;
+
+    width: 700rpx;
+    border-radius: 15rpx;
+
+    background-color: #fff;
+}
+
+.icon{
+    margin-left: 25rpx;
+}
+
+.runner{
+    margin: 27rpx 15rpx 27rpx 15rpx;
+
+    width: 700rpx;
+    border-radius: 15rpx;
+
+    background-color: #fff;
+}
+
+
+.status{
+    margin: 5rpx 15rpx 27rpx 15rpx;
+    padding: 10rpx 0;
+
+    width: 700rpx;
+    border-radius: 15rpx;
+
+    text-align: center;
+    font-family: serif;
+    font-size: 40rpx;
+    font-weight: bold;
+
+
+    color: rgb(158, 158, 158);
+    background-color: #fff;
+}
+
+.done{
+    display: inline-block;
+    padding: 10rpx 10rpx;
+
+    font-size: 38rpx;
+    font-family: serif;
+    color: rgb(62, 192, 62);
+}
+
+.cancle{
+    display: inline-block;
+    padding: 10rpx 10rpx;
+
+    font-size: 38rpx;
+    font-family: serif;
+    color: rgb(241, 81, 113);
+}

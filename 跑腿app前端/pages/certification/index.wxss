@@ -1,0 +1,39 @@
+.out{
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content:center */
+    padding: 25rpx;
+    margin: 35rpx;
+
+    border-color: transparent transparent rgb(185, 190, 190) transparent;
+    border-style:solid;
+    border-width: 1rpx;
+}
+
+.out input{
+    width: 400rpx;
+}
+
+.btn {
+
+    margin: 70rpx 45rpx 20rpx 45rpx;
+
+    height: 75rpx;
+    border-radius: 10rpx;
+
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(47, 211, 14);
+}
+
+.portocol{
+    margin: 20rpx 62rpx 20rpx 62rpx;
+    display: flex;
+    flex-direction: row;
+
+    font-size: 25rpx;
+}
+
+.portocol navigator{
+    color: rgb(25, 164, 211);
+}

@@ -1,0 +1,98 @@
+/* pages/placOrder/index.wxss */
+page{
+    background-color: #fff;
+}
+
+.container{
+    padding: 33rpx;
+    margin: 0rpx;
+
+    background-color: #fff;
+}
+
+.type{
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.title{
+    margin: 15rpx 0;
+
+    font-size: 40rpx;
+    font-family: serif;
+    font-weight: bold;
+}
+
+.item{
+    padding: 10rpx;
+    margin: 8rpx;
+
+    width: 188rpx;
+    height: 34rpx;
+
+    border: 3rpx solid rgb(133, 133, 133);
+    border-radius: 10rpx;
+
+    font-size: 28rpx;
+    line-height: 34rpx;
+    text-align: center;
+
+}
+
+.beChosed{
+    background-color: rgb(252, 248, 204);
+    border: 3rpx solid rgb(245, 179, 35);
+    border-radius: 10rpx;
+}
+
+.address{
+    margin: 30rpx 0rpx;
+    border-color: tomato transparent tomato transparent;
+    border-style: solid;
+    /* border-radius: 15rpx; */
+}
+/* 发货地址 */
+.send{
+    padding: 20rpx 0 20rpx 40rpx;
+    margin: 8rpx 6rpx 0 6rpx;
+  }
+/* 收货地址 */
+.get{
+    padding: 20rpx 0 20rpx 40rpx;
+    margin: 0 6rpx 25rpx 6rpx;
+    border-radius: 15rpx;
+  
+    background-color: rgb(236, 236, 231);
+    color: rgb(252, 146, 7);
+    font-size: 35rpx;
+    width: 673rpx;
+}
+
+.out{
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content:center */
+    padding: 18rpx;
+    margin: 15rpx;
+
+    border-color: transparent transparent rgb(185, 190, 190) transparent;
+    border-style:solid;
+    border-width: 1rpx;
+}
+
+.out input{
+    width: 455rpx;
+}
+
+.btn {
+
+    margin: 70rpx 40rpx 20rpx 40rpx;
+
+    height: 75rpx;
+    border-radius: 10rpx;
+
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(47, 211, 14);
+}

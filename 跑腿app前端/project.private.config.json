@@ -1,0 +1,30 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "下单页面",
+                    "pathName": "pages/placOrder/index",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "测试页面",
+                    "pathName": "pages/test/index",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}

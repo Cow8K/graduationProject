@@ -1,0 +1,30 @@
+<form bindsubmit="getValues">
+<view class="container">
+    <view class="out">
+        地址<text decode="{{true}}">*&nbsp;&nbsp;&nbsp;</text>
+        <input type="text" name="address" id="address" 
+        bindinput="changeColor"
+        placeholder="请输入地址"/>
+    </view>
+    <view class="out">
+        门牌号<text decode="{{true}}">&nbsp;&nbsp;</text>
+        <input type="text" name="number" id="number" 
+        bindinput="changeColor" placeholder="单元门牌号等，如贤德11栋415"/>
+    </view>
+    <view class="out">
+        联系人<text decode="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+        <input type="text" name="contactman" id="contactman" 
+        bindinput="changeColor"
+        placeholder="联系人姓名"/>
+    </view>
+    <view class="out">
+        电话<text decode="{{true}}">*&nbsp;&nbsp;&nbsp;</text>
+        <input type="text" name="phone" id="phone" bindinput="changeColor"
+        placeholder="手机号"/>
+    </view>
+    <!-- <input type="button" value="保存并使用" class="btn"/> -->
+    <button disabled="{{btn?false:true}}" form-type="submit" class="{{btn?'change':''}}">
+        保存并使用
+    </button>
+</view>
+</form>

@@ -1,0 +1,27 @@
+<form bindsubmit="doCertify">
+    <view class="out">
+        <text decode="{{true}}">学号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> 
+        <input type="text" placeholder="请输入9位学号" 
+               bindinput="changeColor" name="stuId"/>
+    </view>
+    <view class="out">
+        <text decode="{{true}}">姓名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> 
+        <input type="text" placeholder="请输入本人姓名" 
+               bindinput="changeColor" name="name"/>
+    </view>
+    <view class="out">
+        <text decode="{{true}}">电话&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text> 
+        <input type="text" placeholder="请输入本人电话号码" 
+        bindinput="changeColor" name="phone"/>
+    </view>
+    <view class="out">
+        <text decode="{{true}}">证件号&nbsp;&nbsp;&nbsp;</text> 
+        <input type="text" placeholder="请输入18位居民身份证号码" 
+               bindinput="changeColor" name="pId"/>
+    </view>
+    <!-- <input type="submit" value="确认" class="btn"/> -->
+    <button disabled="{{btn?false:true}}" form-type="submit" class="btn">确认</button>
+</form>
+<view class="portocol">
+    点击按钮即代表您已阅读并同意<navigator>《高校互助实名相关协议》</navigator>
+</view>

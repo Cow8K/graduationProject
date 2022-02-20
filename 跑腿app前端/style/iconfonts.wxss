@@ -1,0 +1,138 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3181590 */
+  src: url('//at.alicdn.com/t/font_3181590_bja62ubnhjl.woff2?t=1645240220997') format('woff2'),
+       url('//at.alicdn.com/t/font_3181590_bja62ubnhjl.woff?t=1645240220997') format('woff'),
+       url('//at.alicdn.com/t/font_3181590_bja62ubnhjl.ttf?t=1645240220997') format('truetype');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-cha:before {
+  content: "\e686";
+  font-size: 40rpx;
+  color: rgb(241, 81, 113);
+}
+
+.icon-gou:before {
+  content: "\e614";
+  font-size: 40rpx;
+}
+
+.icon-wukong:before {
+  content: "\e60a";
+}
+
+.icon-xiaofei:before {
+  content: "\e613";
+  font-size: 60rpx;
+}
+
+.icon-qujian:before {
+  content: "\e609";
+  font-size: 75rpx;
+  color: rgb(238, 164, 4);
+}
+
+.icon-shijian:before {
+  content: "\e8a9";
+  font-size: 60rpx;
+}
+
+.icon-fuwu:before {
+  content: "\e63a";
+  font-size: 60rpx;
+  color: rgb(238, 10, 56);
+}
+
+.icon-shoujian:before {
+  content: "\e64e";
+  font-size: 67rpx;
+  color: rgb(238, 31, 4);
+}
+
+.icon-lianxifangshi-xianxing:before {
+  content: "\e637";
+  font-size: 60rpx;
+  color:#00bfff;
+}
+
+.icon-baojingzhuangtaiqidong-05:before {
+  content: "\e62b";
+  font-size: 50rpx;
+  color:deepskyblue;
+}
+
+.icon-pinglunbeizhu:before {
+  content: "\e66e";
+  font-size: 60rpx;
+  color: rgb(98, 43, 226);
+}
+
+.icon-wupinxinxi:before {
+  content: "\e680";
+  font-size: 60rpx;
+  color: coral;
+}
+
+.icon-fuwuleixing:before {
+  content: "\e60f";
+  font-size: 50rpx;
+  color:rgb(65, 207, 89);
+  
+}
+
+.icon-yijianfankui1:before {
+  content: "\e60e";
+}
+
+.icon-kefu1:before {
+  content: "\e88f";
+}
+
+.icon-shezhi:before {
+  content: "\e617";
+}
+
+.icon-security:before {
+  content: "\e600";
+  color:deepskyblue;
+  font-size: 40rpx;
+  line-height: 40rpx;
+}
+
+.icon-a-shandiansudu:before {
+  content: "\e75c";
+}
+
+.icon-gouwuche:before {
+  content: "\e63f";
+}
+
+.icon-receipt-address:before {
+  content: "\e673";
+}
+
+.icon-shoucang:before {
+  content: "\e86d";
+}
+
+.icon-dingdan:before {
+  content: "\e897";
+}
+
+.icon-fukuantongzhi:before {
+  content: "\e60c";
+}
+
+.icon-kefu:before {
+  content: "\ec2e";
+}
+
+.icon-icon-:before {
+  content: "\e701";
+}

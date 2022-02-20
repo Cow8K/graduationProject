@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/square/index",
+    "pages/order/index",
+    "pages/mine/index",
+    "pages/showImg/index",
+    "pages/certification/index",
+    "pages/receive/index", 
+    "pages/get/index",
+    "pages/test/index",
+    "pages/orderDetail/index",
+    "pages/placOrder/index",
+    "pages/squOrderDetail/index",
+    "pages/placeGet/index",
+    "pages/placeReceive/index",
+    "pages/feedback/index"
+  ],
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "./icons/_home.png",
+      "selectedIconPath": "./icons/home.png"
+    },
+    {
+      "pagePath": "pages/square/index",
+      "text": "广场",
+      "iconPath": "./icons/category.png",
+      "selectedIconPath": "./icons/category-o.png"
+    },
+    {
+      "pagePath": "pages/order/index",
+      "text": "订单",
+      "iconPath": "./icons/cart.png",
+      "selectedIconPath": "./icons/cart-o.png"
+    },
+    {
+      "pagePath": "pages/mine/index",
+      "text": "我的",
+      "iconPath": "./icons/_my.png",
+      "selectedIconPath": "./icons/my.png"
+    }]
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,31 @@
+<view class="container">
+    <view class="up">
+        <image src="../../icons/flash.png" />
+        <view>
+            <text class="username">theFastestMan</text>
+            <block wx:if="{{!judge}}">
+                <navigator url="/pages/certification/index">
+                    完成「实名认证」, 账号更安全<text> 去认证 ></text>
+                </navigator>
+            </block>
+        </view>
+    </view>
+    <view class="down">
+        <view>
+            <text class="iconfont icon-shezhi">
+            </text><text class="font">设置</text>
+        </view>
+        <view catchtap="makeCall">
+            <text class="iconfont icon-kefu1"></text>
+            <text class="font">联系客服</text> 
+        </view>
+        <view bindtap="toFeedback">
+            <text class="iconfont icon-yijianfankui1"></text>
+            <text class="font">意见反馈</text> 
+        </view>
+    </view>
+</view>
+
+
+
+

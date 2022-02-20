@@ -1,0 +1,5 @@
+<view>
+    <image src="../../icons/coreValue2.png" mode="aspectFit" />
+    <tabs></tabs>
+    <button>设置</button>
+</view>
