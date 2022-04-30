@@ -1,0 +1,11 @@
+<button class="btn" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+  <image class="avatar" src="{{avatarUrl}}"></image>
+</button> 
+<view class="name">
+    <text decode="{{true}}" style="display: inline-block; font-weight: 700;">昵称&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    <input type="nickname" class="nickname" bindinput="setNickname" placeholder="请输入昵称"/>
+</view>
+<view class="grant">
+    <button type="default" bindtap="cancle">取消</button>
+    <button type="primary" bindtap="toHome">确认</button>
+</view>

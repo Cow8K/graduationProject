@@ -6,6 +6,7 @@ Page({
      */
     data: {
         judge:false,
+        currUser:{},
     },
 
     // 当点击“意见反馈”时，会触发该函数，使页面跳转到 意见反馈的页面
@@ -39,6 +40,10 @@ Page({
               if(result.data.status == 200) this.setData({judge:true});
             }
           });
+          
+          this.setData({
+              currUser: getApp().globalData.currUser
+          })
     },
 
     /**

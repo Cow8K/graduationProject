@@ -1,0 +1,24 @@
+.avatar-wrapper{
+    display: inline-block;
+
+}
+
+.avatar{
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+}
+.name{
+    /* margin: 0 25px 0 0; */
+    padding: 40px 22px 0 22px;
+    display: flex;
+}
+
+.grant{
+    display: flex;
+    margin: 50px 20px 0 20px;
+}
+
+.grant button{
+    margin: 7px;
+}

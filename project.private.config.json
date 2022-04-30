@@ -14,7 +14,7 @@
             "list": [
                 {
                     "name": "下单页面",
-                    "pathName": "pages/placOrder/index",
+                    "pathName": "pages/certification/index",
                     "query": "",
                     "scene": null
                 },
