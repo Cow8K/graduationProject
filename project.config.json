@@ -47,7 +47,7 @@
         "useCompilerPlugins": false
     },
     "compileType": "miniprogram",
-    "libVersion": "2.19.4",
+    "libVersion": "2.24.0",
     "appid": "wx6165c09b4074e2cb",
     "projectname": "graduationProject",
     "debugOptions": {

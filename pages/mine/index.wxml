@@ -1,14 +1,29 @@
 <view class="container">
     <view class="up">
-        <image src="../../icons/flash.png" />
-        <view>
-            <text class="username">theFastestMan</text>
+        <!-- 当用户授权后，使用用户指定的头像与昵称 -->
+        <block wx:if="{{currUser.status==1}}">
+            <image src="{{currUser.img}}" />
+            <view>
+            <text class="username">{{currUser.nickname}}</text>
             <block wx:if="{{!judge}}">
                 <navigator url="/pages/certification/index">
                     完成「实名认证」, 账号更安全<text> 去认证 ></text>
                 </navigator>
             </block>
         </view>
+        </block>
+        <!-- 当用户没用授权时，使用默认头像与昵称 -->
+        <block wx:if="{{currUser.status==0}}">
+            <image src="../../icons/flash.png" />
+            <view>
+                <text class="username">theFastestMan</text>
+                <block wx:if="{{!judge}}">
+                    <navigator url="/pages/certification/index">
+                        完成「实名认证」, 账号更安全<text> 去认证 ></text>
+                    </navigator>
+                </block>
+            </view>
+        </block>
     </view>
     <view class="down">
         <view>
