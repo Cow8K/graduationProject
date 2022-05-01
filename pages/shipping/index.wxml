@@ -1,0 +1,64 @@
+<block wx:if="{{!doDelete}}">
+    <view class="container">
+    <view class="main">
+        <!-- 地址详情左边部分 -->
+        <view class="edge">
+            <!-- 左边的内容 -->
+            <view class="content">刘盛</view>
+        </view>
+        <!-- 地址详情中间部分 -->
+        <view class="center">
+            <view style="margin: 0 0 4rpx 0">
+                <text class="name">刘盛 </text>
+                <text class="phone"> 15367878822 </text>
+                <text class="default"> 默认</text>
+            </view>
+            <view style="margin: 0 0 4rpx 0">
+                <text>湖南省长沙市岳麓区</text>
+            </view>
+            <view>湖南工商大学</view>
+        </view>
+        <view class="edge" bindtap="edit">
+            <view class="iconfont icon-bianji1" style="padding: 0 17rpx;line-height: 75rpx;"></view>
+        </view>
+    </view>
+    </view> 
+</block>
+
+
+
+<block wx:if="{{doDelete}}">
+    <view class="container">
+    <view class="main">
+        <!-- 地址详情左边部分 -->
+        <view class="edge">
+            <!-- 左边的内容 -->
+            <view class="content">刘盛</view>
+        </view>
+        <!-- 地址详情中间部分 -->
+        <view class="center">
+            <view style="margin: 0 0 4rpx 0">
+                <text class="name">刘盛 </text>
+                <text class="phone"> 15367878822 </text>
+                <text class="default"> 默认</text>
+            </view>
+            <view style="margin: 0 0 4rpx 0">
+                <text>湖南省长沙市岳麓区</text>
+            </view>
+            <view>湖南工商大学</view>
+        </view>
+        <view class="edge" bindtap="edit">
+            <view class="iconfont icon-bianji1" style="padding: 0 17rpx;line-height: 75rpx;"></view>
+        </view>
+    </view>
+    <view class="hidde">
+        <radio>默认地址</radio>
+        <text style="padding: 0 0 0 400rpx;">删除</text>
+    </view>
+</view>
+</block>
+
+
+<view class="foot">
+        <view class="add" bindtap="goAddress">+ 添加收件地址</view>
+</view>

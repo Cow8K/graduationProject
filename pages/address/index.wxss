@@ -1,0 +1,6 @@
+/* pages/address/index.wxss */
+@import '../receive/index.wxss';
+
+.btn{
+    background-color: rgb(252, 248, 44); 
+}

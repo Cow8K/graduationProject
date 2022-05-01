@@ -1,15 +1,34 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3181590 */
-  src: url('//at.alicdn.com/t/font_3181590_bja62ubnhjl.woff2?t=1645240220997') format('woff2'),
-       url('//at.alicdn.com/t/font_3181590_bja62ubnhjl.woff?t=1645240220997') format('woff'),
-       url('//at.alicdn.com/t/font_3181590_bja62ubnhjl.ttf?t=1645240220997') format('truetype');
+  src: url('//at.alicdn.com/t/font_3181590_md7daexim7d.woff2?t=1651386621149') format('woff2'),
+       url('//at.alicdn.com/t/font_3181590_md7daexim7d.woff?t=1651386621149') format('woff'),
+       url('//at.alicdn.com/t/font_3181590_md7daexim7d.ttf?t=1651386621149') format('truetype');
 }
+
 .iconfont {
   font-family: "iconfont" !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bianji1:before {
+  font-size: 45rpx;
+  content: "\e636";
+}
+
+
+.icon-shousuo:before {
+  font-weight: 100;
+  font-size: 18px;
+  content: "\e616";
+}
+
+.icon-qushui:before {
+  font-weight: 100;
+  font-size: 18px;
+  content: "\e786";
 }
 
 .icon-cha:before {

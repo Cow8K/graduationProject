@@ -1,0 +1,93 @@
+@import '../../style/iconfonts.wxss';
+
+page{
+    background-color: rgb(228, 228, 228);
+}
+.container{
+    margin: 15rpx;
+    padding: 0;
+    /* width: 100%; */
+    border-radius: 20rpx;
+    background-color: #fff;
+}
+/* 设置总体为flex布局 */
+.main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* 地址详情两侧，即“姓名”+“编辑图标” */
+.edge{
+    margin: 10rpx 15rpx 5rpx 15rpx;
+    padding: 10rpx;
+    /* height: 160rpx; */
+    width: 80rpx;
+}
+
+/* 中间部分 */
+.center{
+    margin: 20rpx 0 5rpx 0;
+    padding: 8rpx 0;
+
+    /* height: 156rpx; */
+    width: 500rpx;
+}
+/* 中间部分内容 */
+.content{
+    /* margin: 18rpx auto; */
+    height: 40px;
+    width: 40px;
+
+    text-align: center;
+    border-radius: 40rpx;
+    line-height: 75rpx;
+    
+    font-size: 30rpx;
+    color: rgb(255, 90, 40);
+    background-color: rgb(255, 215, 215);
+}
+/* 中间部分的姓名样式 */
+.name{
+    font-weight: bolder;
+    font-size: 38rpx;
+}
+/* 中间部分的电话号码样式 */
+.phone{
+    color: rgb(161, 161, 161);
+    font-size: 30rpx;
+}
+/* 选择某个地址后，显示“默认”二字 */
+.default{
+    padding: 3rpx;
+
+    border: rgb(255, 112, 16) solid 1px;
+    border-radius: 10rpx;
+
+    font-size: 28rpx;
+    font-weight: bold;
+    color: rgb(255, 112, 16);
+}
+
+  /* 底部添加地址的样式 */
+.foot{
+    position:fixed;
+    bottom:0;
+    width: 750rpx;
+    
+    background-color: #fff;
+    height:68rpx;
+    padding: 15rpx 0 35rpx 0;
+   
+}
+.foot view{
+    
+    padding: 15rpx 0;
+    margin: auto 20rpx;
+    text-align: center;
+
+    border-radius: 45rpx;
+
+    background-color: rgb(255, 112, 16);
+    color: #fff
+}

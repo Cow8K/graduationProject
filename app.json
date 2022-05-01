@@ -15,7 +15,10 @@
     "pages/placeGet/index",
     "pages/placeReceive/index",
     "pages/feedback/index",
-    "pages/login/index"
+    "pages/login/index",
+    "pages/address/index",
+    "pages/pickup/index",
+    "pages/shipping/index"
   ],
   "tabBar": {
     "list": [{

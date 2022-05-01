@@ -27,7 +27,17 @@ Page({
           }
           
       })
-  },
+    },
+    pickUp(){
+        wx.navigateTo({
+          url: '/pages/pickup/index',
+        })
+    },
+    shipping(){
+        wx.navigateTo({
+          url: '/pages/shipping/index',
+        })
+    },
 
     /**
      * 生命周期函数--监听页面加载
