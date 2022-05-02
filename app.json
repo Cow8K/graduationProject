@@ -17,6 +17,7 @@
     "pages/feedback/index",
     "pages/login/index",
     "pages/address/index",
+    "pages/addressDetail/index",
     "pages/pickup/index",
     "pages/shipping/index"
   ],

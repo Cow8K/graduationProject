@@ -14,7 +14,7 @@
             </block>
         </view>
         <!-- 地址详情中间部分 -->
-        <view class="center">
+        <view class="center"  bindtap="modify" data-id="{{item.id}}">
             <view style="margin: 0 0 4rpx 0">
                 <text class="name">{{item.username}} </text>
                 <text class="phone"> {{item.phone}} </text>
@@ -53,7 +53,7 @@
                 </block>
             </view>
             <!-- 地址详情中间部分 -->
-            <view class="center">
+            <view class="center" bindtap="modify" data-id="{{item.id}}">
                 <view style="margin: 0 0 4rpx 0">
                     <text class="name">{{item.username}} </text>
                     <text class="phone"> {{item.phone}} </text>

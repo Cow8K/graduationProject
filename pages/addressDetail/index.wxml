@@ -1,0 +1,44 @@
+<!--pages/addressDetail/index.wxml-->
+<form bindsubmit="getValues">
+<view class="container">
+    <view class="out">
+        地址<text decode="{{true}}">*&nbsp;&nbsp;&nbsp;</text>
+        <input type="text" name="address" id="address" 
+        bindinput="changeColor"
+        placeholder="请输入地址"
+        value="{{address[0].address}}"/>
+    </view>
+    <view class="out">
+        门牌号<text decode="{{true}}">&nbsp;&nbsp;</text>
+        <input type="text" name="detail" id="number" 
+        bindinput="changeColor" placeholder="单元门牌号等，如贤德11栋415"
+        value="{{address[0].detail}}"/>
+    </view>
+    <view class="out">
+        联系人<text decode="{{true}}">&nbsp;&nbsp;&nbsp;</text>
+        <input type="text" name="username" id="contactman" 
+        bindinput="changeColor"
+        placeholder="联系人姓名"
+        value="{{address[0].username}}"/>
+    </view>
+    <view class="out">
+        电话<text decode="{{true}}">*&nbsp;&nbsp;&nbsp;</text>
+        <input type="text" name="phone" id="phone" bindinput="changeColor"
+        placeholder="手机号" value="{{address[0].phone}}"/>
+    </view>
+    <view style="margin: 15rpx 15rpx 22rpx;">
+        <text style="margin: 0 280rpx 0 0;">设为默认地址</text>
+        <block wx:if="{{address[0].status==1}}">
+            <switch bindchange="setStatus" checked/>
+        </block>
+        <block wx:if="{{address[0].status!=1}}">
+            <switch bindchange="setStatus"/>
+        </block>
+    </view>
+    <input type="text" value="{{address[0].id}}" style="display: none;" name="id"/>
+    <!-- <input type="button" value="保存并使用" class="btn"/> -->
+    <button form-type="submit" class="btn">
+        保存并使用
+    </button>
+</view>
+</form>

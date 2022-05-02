@@ -8,7 +8,8 @@ Page({
         doDelete : false,
         addresses:[],
         addId:0,
-        doSet:false
+        doSet:false,
+        modify:true,
     },
     edit(){
         // 判断doDelete是否为true，如果是true则设为false，反之亦然。
@@ -78,6 +79,18 @@ Page({
             addresses:addresses
         })
     },
+    modify(e){
+        let addId = e.currentTarget.dataset.id;
+        
+        // true取件地址页面触发modify函数，false下单页面触发
+        if(this.data.modify){
+            wx.navigateTo({
+              url: '/pages/addressDetail/index?id='+addId+'&type=1',
+            })
+        }else{
+            
+        }
+    },
 
     /**
      * 生命周期函数--监听页面加载
@@ -96,6 +109,20 @@ Page({
                 icon: 'success',
                 duration:1400
               });
+        }
+        if(options.modify==1){
+            wx.showToast({
+                title: '修改成功',
+                icon: 'success',
+                duration:1400
+              });
+        }
+        
+        // 表示从下单页面跳转到当前页面
+        if(options.add == 1){
+            this.setData({
+                modify:false,
+            })
         }
 
         wx.request({

@@ -1,4 +1,4 @@
-// pages/address/index.js
+// pages/addressDetail/index.js
 Page({
 
     /**
@@ -10,6 +10,7 @@ Page({
         type: 0,
         // status表示是否为默认地址，0表示否，1表示是
         status:0,
+        address:{}
     },
 
     // 设置是否为默认地址
@@ -45,26 +46,27 @@ Page({
         let type = this.data.type;
 
         wx.request({
-            url: 'http://localhost:80/address/add',
+            url: 'http://localhost:80/address/update',
             data: {
                 address:address,
-                type:type
+                type:type,
+                id:address.id
             },
             success:result=>{
                 if(result.data.status == 200){
                     // type == 1跳转到收件地址页面，反之跳转到取件页面
                     if(type==1){
                         wx.navigateTo({
-                            url: '/pages/shipping/index?message=1',
+                            url: '/pages/shipping/index?modify=1',
                         })
                     }else{
                         wx.navigateTo({
-                            url: '/pages/pickup/index?message=1',
+                            url: '/pages/pickup/index?modify=1',
                           })
                     }
                 }else{
                     wx.showToast({
-                        title: '添加失败',
+                        title: '修改失败',
                         icon: 'fail',
                         duration:1000
                       });
@@ -77,10 +79,24 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        
         // 判断是从取件地址还是收件地址跳转到当前页面
         let bean = options.type;
         this.setData({
             type:bean
+        });
+
+        // 根据addressID查询指定地址
+        wx.request({
+          url: 'http://localhost/address/queryById',
+          data:options,
+          success:result=>{
+              if(result.data.status==200){
+                  this.setData({
+                      address:result.data.address
+                  })
+              }
+          }
         })
     },
 

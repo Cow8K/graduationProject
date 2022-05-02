@@ -25,8 +25,8 @@
                     "scene": null
                 },
                 {
-                    "name": "填写地址页面",
-                    "pathName": "pages/address/index",
+                    "name": "mine页面",
+                    "pathName": "pages/mine/index",
                     "query": "",
                     "scene": null
                 }

@@ -9,7 +9,7 @@
 <!-- 当订单列表为不0 的时候，显示以下标签 -->
 <block wx:if="{{orderList.length!=0}}">
     <view class="container">
-        <navigator url="/pages/orderDetail/index?oId={{item.oId}}" wx:for="{{orderList}}" wx:key="uId">
+        <navigator url="/pages/orderDetail/index?oId={{item.oId}}" wx:for="{{orderList}}" wx:key="{{item.oId}}">
             <view class="content {{item.uId==stuId?'initiate':'accept'}}">
 
                 <!-- 订单上半部分 -->
