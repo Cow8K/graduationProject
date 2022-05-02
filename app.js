@@ -35,6 +35,8 @@ App({
     type:'0',
     getAddress:{address:' 请填写取件地址 >',number:'',contactman:'',phone:''},
     recAddress:{address:' 请填写收件地址 >',number:'',contactman:'',phone:''},
+    shipping:{},
+    pickup:{},
     // status为0表示用户为授权使用默认头像与昵称，为1使用用户指定的头像与昵称
     currUser:{img:"",nickname:"",status:0}
   }

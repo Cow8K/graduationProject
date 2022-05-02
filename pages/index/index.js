@@ -32,13 +32,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // 设置收件与取件地址的数据共享
     let app = getApp();
-
-    this.setData({
-      getAddress:app.globalData.getAddress,
-      recAddress:app.globalData.recAddress,
-    });
 
     // 检验学生是否进行了身份认证
     wx.request({
@@ -63,7 +57,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+    // 设置收件与取件地址的数据共享
+    let app = getApp();
+
+    this.setData({
+      getAddress:app.globalData.getAddress,
+      recAddress:app.globalData.recAddress,
+    });
   },
 
   /**

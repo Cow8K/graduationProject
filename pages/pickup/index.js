@@ -12,6 +12,7 @@ Page({
         doSet:false,
         // 判断是否下单页面跳转到当前页面
         modify:true,
+        order:false
     },
     edit(){
         // 判断doDelete是否为true，如果是true则设为false，反之亦然。
@@ -92,7 +93,34 @@ Page({
                 url: '/pages/addressDetail/index?id='+addId+'&type=0',
             })
         }else{
+            let app = getApp();
 
+            // 根据addressID查询指定地址
+            wx.request({
+                url: 'http://localhost/address/queryById',
+                data:{id:addId,type:0},
+                success:result=>{
+                    if(result.data.status==200){
+                        let currAdd = result.data.address[0];
+                        
+                        app.globalData.getAddress.address = currAdd.address;
+                        app.globalData.getAddress.number = currAdd.detail;
+                        app.globalData.getAddress.contactman = currAdd.username;
+                        app.globalData.getAddress.phone = currAdd.phone;
+
+                        app.globalData.pickup = currAdd;
+                        if(!this.data.order && !this.data.modify){
+                            wx.switchTab({
+                                url: '/pages/index/index',
+                            })
+                        }else if(this.data.order && !this.data.modify){
+                            wx.navigateBack({
+                                delta: 1,
+                            })
+                        }
+                    }
+                }
+            })
         }
     },
     /**
@@ -122,10 +150,16 @@ Page({
                 duration:1400
               });
         }
-        // 表示从下单页面跳转到当前页面
+        // 表示从首页跳转到当前页面
         if(options.add == 1){
             this.setData({
                 modify:false,
+            })
+        }
+        // 表示从下单页面跳转到当前页面
+        if(options.order == 1){
+            this.setData({
+                order:true,
             })
         }
 
@@ -176,9 +210,19 @@ Page({
                 data:{id:addId,type:0},
             })
         }
-        wx.switchTab({
-            url: '/pages/mine/index',
-          })
+        if(!this.data.order && !this.data.modify){
+            wx.switchTab({
+                url: '/pages/index/index',
+            })
+        }else if(this.data.order && !this.data.modify){
+            wx.redirectTo({
+                url: '/pages/placOrder/index',
+            })
+        }else{
+            wx.switchTab({
+                url: '/pages/mine/index',
+            })
+        }
     },
 
     /**

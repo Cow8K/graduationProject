@@ -22,18 +22,18 @@
     <view>
       <block wx:if="{{choise[0].isChosen}}">
         <view class="send">
-          <navigator class="iconfont icon-yuandianzhong" url="/pages/get/index"> {{getAddress.address}}</navigator>
+          <navigator class="iconfont icon-yuandianzhong" url="/pages/pickup/index?add=1"> {{getAddress.address+'  '+getAddress.number}}</navigator>
         </view>
         <view class="get">
-          <navigator class="iconfont icon-yuandianzhong" url="/pages/receive/index">{{recAddress.address}}</navigator>
+          <navigator class="iconfont icon-yuandianzhong" url="/pages/shipping/index?add=1">{{recAddress.address+'  '+recAddress.number}}</navigator>
         </view>
       </block>
       <block wx:if="{{choise[1].isChosen}}">
         <view class="get">
-          <navigator class="iconfont icon-yuandianzhong" url="/pages/receive/index">{{recAddress.address}}</navigator>
+          <navigator class="iconfont icon-yuandianzhong" url="/pages/shipping/index?add=1">{{recAddress.address+'  '+recAddress.number}}</navigator>
         </view>
         <view class="send">
-          <navigator class="iconfont icon-yuandianzhong" url="/pages/get/index"> {{getAddress.address}}</navigator>
+          <navigator class="iconfont icon-yuandianzhong" url="/pages/pickup/index?add=1"> {{getAddress.address+'  '+getAddress.number}}</navigator>
         </view>
       </block>
       <view  style="text-align: center;">

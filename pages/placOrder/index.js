@@ -40,10 +40,12 @@ Page({
 
     makeOrder(e){
         let app = getApp();
+        let getAdd = this.data.getAddress;
+        let recAdd = this.data.recAddress;
         
         let uId = app.globalData.stuId;
-        let getAddress = this.data.getAddress.address;
-        let recAddress = this.data.recAddress.address;
+        let getAddress = getAdd.address+getAdd.number;
+        let recAddress = recAdd.address+recAdd.number;
         let name = this.data.typeName;
         let type = app.globalData.type;
 
@@ -67,7 +69,7 @@ Page({
           success: result =>{
             if(result.data.status == 200){
                 wx.switchTab({
-                  url: '/pages/index/index.',
+                  url: '/pages/square/index',
                 });
 
                 wx.showToast({

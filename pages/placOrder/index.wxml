@@ -13,10 +13,10 @@
 
     <view class="address">
         <view class="send">
-          <navigator id="get" class="iconfont icon-yuandianzhong" url="/pages/placeGet/index"> {{getAddress.address}}</navigator>
+          <navigator id="get" class="iconfont icon-yuandianzhong" url="/pages/pickup/index?add=1&order=1"> {{getAddress.address+'  '+getAddress.number}}</navigator>
         </view>
         <view class="get">
-          <navigator class="iconfont icon-yuandianzhong" url="/pages/placeReceive/index"> {{recAddress.address}}</navigator>
+          <navigator class="iconfont icon-yuandianzhong" url="/pages/shipping/index?add=1&order=1"> {{recAddress.address+'  '+recAddress.number}}</navigator>
         </view>
     </view>
 
