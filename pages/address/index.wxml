@@ -8,12 +8,12 @@
     </view>
     <view class="out">
         门牌号<text decode="{{true}}">&nbsp;&nbsp;</text>
-        <input type="text" name="number" id="number" 
+        <input type="text" name="detail" id="number" 
         bindinput="changeColor" placeholder="单元门牌号等，如贤德11栋415"/>
     </view>
     <view class="out">
         联系人<text decode="{{true}}">&nbsp;&nbsp;&nbsp;</text>
-        <input type="text" name="contactman" id="contactman" 
+        <input type="text" name="username" id="contactman" 
         bindinput="changeColor"
         placeholder="联系人姓名"/>
     </view>
@@ -21,6 +21,10 @@
         电话<text decode="{{true}}">*&nbsp;&nbsp;&nbsp;</text>
         <input type="text" name="phone" id="phone" bindinput="changeColor"
         placeholder="手机号"/>
+    </view>
+    <view style="margin: 15rpx 15rpx 22rpx;">
+        <text style="margin: 0 280rpx 0 0;">设为默认地址</text>
+        <switch bindchange="setStatus"/>
     </view>
     <!-- <input type="button" value="保存并使用" class="btn"/> -->
     <button disabled="{{btn?false:true}}" form-type="submit" class="{{btn?'change':''}}">

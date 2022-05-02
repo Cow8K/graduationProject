@@ -8,6 +8,22 @@ Page({
         btn:false,
         // 0 表示取件，1表示收件
         type: 0,
+        // status表示是否为默认地址，0表示否，1表示是
+        status:0,
+    },
+
+    setStatus(e){
+        // console.log(e.detail.value);
+        let checked = e.detail.value;
+        if(checked){
+            this.setData({
+                status:1
+            })
+        }else{
+            this.setData({
+                status:0
+            })
+        }
     },
 
     // 改变按钮颜色
@@ -21,20 +37,46 @@ Page({
     // 获取表单数据（地址），根据type类型进行不同处理
     getValues(e){
         // 将地址解析成json对象
-        let adress = JSON.parse(JSON.stringify(e.detail.value));
+        let address = e.detail.value;
+        address.status = this.data.status;
+        address.uid = getApp().globalData.stuId;
 
-        // 当type === 1时，说明是收件地址，将表单存入收件地址表
-        if(type===1){
+        let type = this.data.type;
 
-        }else{
-            // 当type === 0时，说明是取件地址，将表单存入取件地址表
-        }
+        wx.request({
+            url: 'http://localhost:80/address/add',
+            data: {
+                address:address,
+                type:type
+            },
+            success:result=>{
+                if(result.data.status == 200){
+                    // type == 1跳转到收件地址页面，反之跳转到取件页面
+                    if(type==1){
+                        wx.navigateTo({
+                            url: '/pages/shipping/index?message=1',
+                        })
+                    }else{
+                        wx.navigateTo({
+                            url: '/pages/pickup/index?message=1',
+                          })
+                    }
+                }else{
+                    wx.showToast({
+                        title: '添加失败',
+                        icon: 'fail',
+                        duration:1000
+                      });
+                }
+            },
+          })
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
+        // 判断是从取件地址还是收件地址跳转到当前页面
         let bean = options.type;
         this.setData({
             type:bean

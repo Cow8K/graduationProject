@@ -17,6 +17,20 @@ page{
     align-items: center;
 }
 
+.zhuye{
+    height: 40px;
+    width: 40px;
+
+    text-align: center;
+    border-radius: 40rpx;
+    line-height: 75rpx;
+    
+    font-size: 30rpx;
+    color: rgb(255, 90, 40);
+    background-color: rgb(255, 0, 0);
+}
+
+
 /* 地址详情两侧，即“姓名”+“编辑图标” */
 .edge{
     margin: 10rpx 15rpx 5rpx 15rpx;
@@ -33,7 +47,7 @@ page{
     /* height: 156rpx; */
     width: 500rpx;
 }
-/* 中间部分内容 */
+/* 左边部分内容 */
 .content{
     /* margin: 18rpx auto; */
     height: 40px;

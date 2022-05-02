@@ -17,23 +17,35 @@ page{
     align-items: center;
 }
 
+.zhuye{
+    height: 40px;
+    width: 40px;
+
+    text-align: center;
+    border-radius: 40rpx;
+    line-height: 75rpx;
+    
+    font-size: 30rpx;
+    color: rgb(255, 90, 40);
+    background-color: rgb(255, 0, 0);
+}
+
 /* 地址详情两侧，即“姓名”+“编辑图标” */
 .edge{
     margin: 10rpx 15rpx 5rpx 15rpx;
     padding: 10rpx;
     /* height: 160rpx; */
     width: 80rpx;
-}
+    display:-webkit-box;
 
-/* 中间部分 */
-.center{
-    margin: 20rpx 0 5rpx 0;
-    padding: 8rpx 0;
-
-    /* height: 156rpx; */
-    width: 500rpx;
+    /* 下列样式将超出盒子的文本显示省略号 */
+    -webkit-line-clamp:1;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -webkit-box-orient:vertical;
+    word-break:break-all;
 }
-/* 中间部分内容 */
+/* 左边部分内容 */
 .content{
     /* margin: 18rpx auto; */
     height: 40px;
@@ -46,6 +58,14 @@ page{
     font-size: 30rpx;
     color: rgb(255, 90, 40);
     background-color: rgb(255, 215, 215);
+}
+/* 中间部分 */
+.center{
+    margin: 20rpx 0 5rpx 0;
+    padding: 8rpx 0;
+
+    /* height: 156rpx; */
+    width: 500rpx;
 }
 /* 中间部分的姓名样式 */
 .name{
@@ -67,6 +87,10 @@ page{
     font-size: 28rpx;
     font-weight: bold;
     color: rgb(255, 112, 16);
+}
+.hidde{
+    padding: 14rpx 10rpx;
+    border-top: solid 1rpx rgb(146, 146, 146);
 }
 
   /* 底部添加地址的样式 */
